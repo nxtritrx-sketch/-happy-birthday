@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, #fff8fb, #ffffff 45%, #fff0f6);
+  color: #555;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 50px 20px 100px;
+}
+
+h1 {
+  color: #ee8eb3;
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+#message {
+  font-size: 19px;
+  margin-top: 35px;
+  line-height: 1.8;
+}
+
+/* =========================
+   เค้ก
+========================= */
+
+.cake {
+  position: relative;
+  width: 290px;
+  margin: 100px auto 35px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cake:active {
+  transform: scale(0.96);
+}
+
+.cake-top {
+  height: 90px;
+  background: #ffc7db;
+  border: 5px solid #f3a2bf;
+  border-radius: 50% 50% 25px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #d86f98;
+  font-family: cursive;
+  font-size: 26px;
+
+  box-shadow: inset 0 -10px 0 rgba(255,255,255,0.25);
+}
+
+.cake-body {
+  height: 150px;
+  background: linear-gradient(#ffd7e5, #ffc9db);
+  border-left: 5px solid #f3a2bf;
+  border-right: 5px solid #f3a2bf;
+  border-bottom: 5px solid #f3a2bf;
+
+  border-radius: 0 0 25px 25px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  padding: 0 18px 15px;
+}
+
+.window {
+  width: 48px;
+  height: 62px;
+  background: #fff7fa;
+  border: 4px solid #f1a4bd;
+  border-radius: 25px 25px 8px 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ef93b3;
+  font-size: 20px;
+}
+
+.door {
+  width: 58px;
+  height: 88px;
+  background: #ec91b1;
+  border: 4px solid #df789d;
+  border-radius: 30px 30px 5px 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 20px;
+}
+
+.cake-base {
+  width: 320px;
+  height: 20px;
+  background: #f5afc6;
+  border-radius: 50%;
+  margin-left: -15px;
+  margin-top: -7px;
+}
+
+/* =========================
+   เทียน
+========================= */
+
+.candles {
+  position: absolute;
+  width: 100%;
+  top: -75px;
+
+  display: flex;
+  justify-content: space-around;
+
+  padding: 0 30px;
+
+  opacity: 0;
+  transform: translateY(15px);
+  transition: 0.5s;
+
+  pointer-events: none;
+}
+
+.candles.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.candle {
+  width: 8px;
+  height: 70px;
+
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff,
+    #ffffff 6px,
+    #ffb8ce 6px,
+    #ffb8ce 12px
+  );
+
+  border: 1px solid #d999ad;
+  border-radius: 5px;
+
+  position: relative;
+}
+
+.flame {
+  position: absolute;
+
+  width: 15px;
+  height: 23px;
+
+  top: -25px;
+  left: -4px;
+
+  background: #ffb13b;
+
+  border-radius: 50% 50% 45% 45%;
+
+  box-shadow:
+    0 0 8px #ffc95c,
+    0 0 18px #ffd982;
+
+  animation: flameMove 0.5s infinite alternate;
+}
+
+@keyframes flameMove {
+  from {
+    transform: scale(0.9) rotate(-5deg);
+  }
+
+  to {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+/* =========================
+   ปุ่ม
+========================= */
+
+button {
+  border: none;
+  outline: none;
+
+  background: linear-gradient(135deg, #ef8fb3, #e879a5);
+
+  color: white;
+
+  padding: 14px 28px;
+
+  border-radius: 30px;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 15px rgba(225, 117, 160, 0.25);
+
+  transition: 0.2s;
+}
+
+button:active {
+  transform: scale(0.94);
+}
+
+.hidden {
+  display: none;
+}
+
+/* =========================
+   ฉลอง
+========================= */
+
+#celebrate {
+  margin-top: 55px;
+  animation: fadeUp 0.8s ease;
+}
+
+#celebrate h2 {
+  color: #e578a3;
+  font-size: 28px;
+}
+
+.littleText {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* =========================
+   ซองจดหมาย
+========================= */
+
+.envelope {
+  font-size: 105px;
+  margin: 20px 0 5px;
+  cursor: pointer;
+
+  animation: envelopeFloat 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes envelopeFloat {
+  from {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  to {
+    transform: translateY(-13px) rotate(2deg);
+  }
+}
+
+/* =========================
+   จดหมาย
+========================= */
+
+.letter {
+  margin-top: 70px;
+
+  background: rgba(255,255,255,0.96);
+
+  border: 5px solid #edb0d8;
+
+  border-radius: 18px;
+
+  padding: 35px 28px;
+
+  line-height: 1.9;
+
+  box-shadow:
+    0 15px 40px rgba(220, 125, 165, 0.18);
+
+  text-align: left;
+
+  animation: openLetter 0.9s ease;
+}
+
+.letter h2 {
+  color: #d86e9c;
+  font-size: 22px;
+}
+
+.letter h3 {
+  color: #e17da6;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.letter p {
+  font-size: 16px;
+  margin: 25px 0;
+}
+
+.letter strong {
+  color: #dc719d;
+}
+
+.letter-decoration {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.love {
+  font-size: 21px;
+  margin-top: 35px !important;
+}
+
+@keyframes openLetter {
+  from {
+    opacity: 0;
+    transform: translateY(80px) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   หัวใจ
+========================= */
+
+.heart {
+  text-align: center;
+
+  color: #ed8eb2;
+
+  font-size: 60px;
+
+  margin-top: 20px;
+
+  animation: heartbeat 0.8s infinite alternate;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
+}
+
+/* =========================
+   เอฟเฟกต์หัวใจลอย
+========================= */
+
+.floating-heart {
+  position: fixed;
+
+  bottom: -30px;
+
+  font-size: 25px;
+
+  pointer-events: none;
+
+  animation: floatHeart 3s linear forwards;
+}
+
+@keyframes floatHeart {
+  from {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* มือถือ */
+
+@media (max-width: 400px) {
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .cake {
+    transform: scale(0.9);
+  }
+
+  .letter {
+    padding: 28px 20px;
+  }
+
+}
