@@ -7,406 +7,1646 @@ html {
 }
 
 body {
+
   margin: 0;
+
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans Thai",
+    Arial,
+    sans-serif;
+
   background:
-    radial-gradient(circle at top, #fff8fb, #ffffff 45%, #fff0f6);
-  color: #555;
+    radial-gradient(
+      circle at top,
+      #fff8fa,
+      #ffffff 55%,
+      #fff3f7
+    );
+
+  color: #50474a;
+
+  overflow-x: hidden;
+}
+
+
+/* =====================
+   PAGE
+===================== */
+
+.page {
+
+  width: 100%;
+
+  max-width: 520px;
+
+  min-height: 100vh;
+
+  margin: auto;
+
+  padding:
+    55px 20px
+    100px;
+
   text-align: center;
 }
 
-.container {
-  width: 100%;
-  max-width: 520px;
-  margin: auto;
-  padding: 50px 20px 100px;
+
+.tiny-heart {
+
+  color: #ed9ab2;
+
+  font-size: 35px;
+
+  animation:
+    heartbeat
+    1s
+    infinite
+    alternate;
 }
+
 
 h1 {
-  color: #ee8eb3;
-  font-size: 30px;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
+
+  margin:
+    5px 0
+    35px;
+
+  color: #e889a6;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 36px;
+
+  font-weight: 500;
+
+  font-style: italic;
 }
 
-#message {
+
+#instruction {
+
+  min-height: 55px;
+
   font-size: 19px;
-  margin-top: 35px;
-  line-height: 1.8;
+
+  line-height: 1.7;
 }
 
-/* =========================
-   เค้ก
-========================= */
+
+/* =====================
+   CAKE
+===================== */
 
 .cake {
+
   position: relative;
-  width: 290px;
-  margin: 100px auto 35px;
+
+  width: 330px;
+
+  height: 385px;
+
+  margin:
+    70px auto
+    15px;
+
   cursor: pointer;
-  transition: transform 0.3s;
+
+  filter:
+    drop-shadow(
+      0 16px 15px
+      rgba(216, 132, 157, .16)
+    );
+
+  transition:
+    transform .2s;
 }
+
 
 .cake:active {
-  transform: scale(0.96);
+
+  transform:
+    scale(.97);
+
 }
+
+
+/* =====================
+   CAKE TOP
+===================== */
 
 .cake-top {
-  height: 90px;
-  background: #ffc7db;
-  border: 5px solid #f3a2bf;
-  border-radius: 50% 50% 25px 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  color: #d86f98;
-  font-family: cursive;
-  font-size: 26px;
+  position: absolute;
 
-  box-shadow: inset 0 -10px 0 rgba(255,255,255,0.25);
+  z-index: 5;
+
+  top: 35px;
+
+  left: 15px;
+
+  width: 300px;
+
+  height: 135px;
+
+  border:
+
+    4px solid
+    #f1adbf;
+
+  border-radius: 50%;
+
+  background:
+
+    radial-gradient(
+      circle at 35% 25%,
+      #fff0f4,
+      transparent 25%
+    ),
+
+    linear-gradient(
+      #ffdae4,
+      #ffc7d6
+    );
+
 }
+
+
+.cake-writing {
+
+  position: absolute;
+
+  top: 37px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  color: #d87996;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-style: italic;
+
+  font-size: 28px;
+
+  line-height: .85;
+
+  text-shadow:
+    0 2px 0
+    #ffeaf0;
+}
+
+
+/* =====================
+   CREAM
+===================== */
+
+.cream {
+
+  position: absolute;
+
+  z-index: 6;
+
+  width: 55px;
+
+  height: 29px;
+
+  border:
+    3px solid
+    #f3aec1;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      #ffe6ed,
+      #ffc9d8
+    );
+
+}
+
+
+.c1 {
+
+  top: 42px;
+
+  left: -10px;
+
+  transform:
+    rotate(-27deg);
+
+}
+
+
+.c2 {
+
+  top: 5px;
+
+  left: 25px;
+
+  transform:
+    rotate(-17deg);
+
+}
+
+
+.c3 {
+
+  top: -12px;
+
+  left: 78px;
+
+  transform:
+    rotate(-5deg);
+
+}
+
+
+.c4 {
+
+  top: -17px;
+
+  left: 123px;
+
+}
+
+
+.c5 {
+
+  top: -12px;
+
+  right: 78px;
+
+  transform:
+    rotate(5deg);
+
+}
+
+
+.c6 {
+
+  top: 5px;
+
+  right: 25px;
+
+  transform:
+    rotate(17deg);
+
+}
+
+
+.c7 {
+
+  top: 42px;
+
+  right: -10px;
+
+  transform:
+    rotate(27deg);
+
+}
+
+
+/* =====================
+   SMALL DECORATION
+===================== */
+
+.mini-flower,
+.dot-flower {
+
+  position: absolute;
+
+  color: white;
+
+  text-shadow:
+
+    0 0 0
+    #e8b65a;
+
+}
+
+
+.flower1 {
+  left: 55px;
+  top: 56px;
+}
+
+.flower2 {
+  right: 55px;
+  top: 55px;
+}
+
+.flower3 {
+  left: 95px;
+  top: 92px;
+}
+
+.flower4 {
+  right: 95px;
+  top: 90px;
+}
+
+
+/* =====================
+   CAKE BODY
+===================== */
 
 .cake-body {
-  height: 150px;
-  background: linear-gradient(#ffd7e5, #ffc9db);
-  border-left: 5px solid #f3a2bf;
-  border-right: 5px solid #f3a2bf;
-  border-bottom: 5px solid #f3a2bf;
 
-  border-radius: 0 0 25px 25px;
+  position: absolute;
 
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  z-index: 2;
 
-  padding: 0 18px 15px;
+  top: 105px;
+
+  left: 22px;
+
+  width: 286px;
+
+  height: 225px;
+
+  border:
+
+    4px solid
+    #f0aabe;
+
+  border-top: none;
+
+  border-radius:
+    15px 15px
+    42px 42px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #ffd5df,
+      #ffc4d4,
+      #ffd5df
+    );
+
 }
+
+
+.df1 {
+  top: 50px;
+  left: 14px;
+}
+
+.df2 {
+  top: 30px;
+  left: 130px;
+}
+
+.df3 {
+  top: 75px;
+  right: 15px;
+}
+
+
+/* =====================
+   WINDOWS
+===================== */
 
 .window {
-  width: 48px;
-  height: 62px;
-  background: #fff7fa;
-  border: 4px solid #f1a4bd;
-  border-radius: 25px 25px 8px 8px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: #ef93b3;
-  font-size: 20px;
-}
-
-.door {
-  width: 58px;
-  height: 88px;
-  background: #ec91b1;
-  border: 4px solid #df789d;
-  border-radius: 30px 30px 5px 5px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: white;
-  font-size: 20px;
-}
-
-.cake-base {
-  width: 320px;
-  height: 20px;
-  background: #f5afc6;
-  border-radius: 50%;
-  margin-left: -15px;
-  margin-top: -7px;
-}
-
-/* =========================
-   เทียน
-========================= */
-
-.candles {
-  position: absolute;
-  width: 100%;
-  top: -75px;
-
-  display: flex;
-  justify-content: space-around;
-
-  padding: 0 30px;
-
-  opacity: 0;
-  transform: translateY(15px);
-  transition: 0.5s;
-
-  pointer-events: none;
-}
-
-.candles.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.candle {
-  width: 8px;
-  height: 70px;
-
-  background: repeating-linear-gradient(
-    45deg,
-    #ffffff,
-    #ffffff 6px,
-    #ffb8ce 6px,
-    #ffb8ce 12px
-  );
-
-  border: 1px solid #d999ad;
-  border-radius: 5px;
-
-  position: relative;
-}
-
-.flame {
   position: absolute;
 
-  width: 15px;
-  height: 23px;
+  bottom: 61px;
 
-  top: -25px;
-  left: -4px;
+  width: 61px;
 
-  background: #ffb13b;
+  height: 78px;
 
-  border-radius: 50% 50% 45% 45%;
+  border:
+
+    7px solid
+    #fff0f3;
+
+  border-radius:
+
+    35px 35px
+    8px 8px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #fff6dd,
+      #ffd6df
+    );
 
   box-shadow:
-    0 0 8px #ffc95c,
-    0 0 18px #ffd982;
 
-  animation: flameMove 0.5s infinite alternate;
+    0 0 0
+    3px
+    #eaa1b6;
+
 }
+
+
+.window-left {
+
+  left: 27px;
+
+}
+
+
+.window-right {
+
+  right: 27px;
+
+}
+
+
+.vertical {
+
+  position: absolute;
+
+  left: 50%;
+
+  width: 3px;
+
+  height: 100%;
+
+  background:
+    #e6a0b4;
+
+}
+
+
+.horizontal {
+
+  position: absolute;
+
+  top: 48%;
+
+  width: 100%;
+
+  height: 3px;
+
+  background:
+    #e6a0b4;
+
+}
+
+
+.flower-box {
+
+  position: absolute;
+
+  left: -8px;
+
+  bottom: -12px;
+
+  width: 64px;
+
+  height: 16px;
+
+  border-radius: 10px;
+
+  background:
+    #fff1f4;
+
+  color:
+    #7d9866;
+
+  font-size: 14px;
+}
+
+
+/* =====================
+   DOOR
+===================== */
+
+.door {
+
+  position: absolute;
+
+  bottom: 15px;
+
+  left: 50%;
+
+  width: 76px;
+
+  height: 115px;
+
+  transform:
+    translateX(-50%);
+
+  border:
+
+    6px solid
+    #fff0f3;
+
+  border-radius:
+
+    45px 45px
+    8px 8px;
+
+  background:
+
+    repeating-linear-gradient(
+
+      90deg,
+
+      #ee9ab4
+      0px,
+
+      #ee9ab4
+      9px,
+
+      #df829f
+      10px,
+
+      #df829f
+      12px
+
+    );
+
+  box-shadow:
+
+    0 0 0
+    3px
+    #e48da8;
+
+}
+
+
+.knob {
+
+  position: absolute;
+
+  top: 55px;
+
+  right: 10px;
+
+  width: 11px;
+
+  height: 11px;
+
+  border-radius: 50%;
+
+  background:
+    #ffd25f;
+
+}
+
+
+/* =====================
+   BUSHES
+===================== */
+
+.bush {
+
+  position: absolute;
+
+  bottom: 7px;
+
+  width: 52px;
+
+  height: 42px;
+
+  padding-top: 9px;
+
+  border-radius:
+
+    50% 50%
+    20px 20px;
+
+  background:
+    #77935e;
+
+  color:
+    #fff5cc;
+
+}
+
+
+.bush-left {
+  left: 28px;
+}
+
+
+.bush-right {
+  right: 28px;
+}
+
+
+/* =====================
+   STAIRS
+===================== */
+
+.stairs {
+
+  position: absolute;
+
+  z-index: 8;
+
+  bottom: 25px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+}
+
+
+.stairs div {
+
+  height: 12px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background:
+    #f6cad3;
+
+}
+
+
+.stairs div:nth-child(1) {
+  width: 90px;
+}
+
+
+.stairs div:nth-child(2) {
+
+  width: 110px;
+
+  margin-top: -3px;
+
+  background:
+    #f0b8c6;
+
+}
+
+
+.stairs div:nth-child(3) {
+
+  width: 130px;
+
+  margin-top: -3px;
+
+  background:
+    #f7d1d8;
+
+}
+
+
+/* =====================
+   CANDLES
+===================== */
+
+.candles {
+
+  position: absolute;
+
+  z-index: 20;
+
+  top: -20px;
+
+  left: 43px;
+
+  width: 245px;
+
+  height: 125px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content:
+    space-around;
+
+  padding:
+    0 12px;
+
+  opacity: 0;
+
+  transform:
+    translateY(-80px);
+
+  transition:
+
+    opacity .3s ease,
+
+    transform .85s
+    cubic-bezier(
+      .22,
+      .8,
+      .3,
+      1.2
+    );
+
+  pointer-events: none;
+
+}
+
+
+/* กดเค้กแล้วเทียนลงมาปัก */
+
+.candles.show {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+/* เทียน */
+
+.candle {
+
+  position: relative;
+
+  width: 7px;
+
+  border:
+
+    1px solid
+    #bfb0b4;
+
+  border-radius:
+    5px 5px
+    2px 2px;
+
+  background:
+
+    repeating-linear-gradient(
+
+      45deg,
+
+      #ffffff
+      0px,
+
+      #ffffff
+      7px,
+
+      #f4aec1
+      7px,
+
+      #f4aec1
+      11px
+
+    );
+
+  box-shadow:
+
+    0 2px 3px
+    rgba(0,0,0,.08);
+
+}
+
+
+.candle1 {
+
+  height: 75px;
+
+  transform:
+    rotate(-4deg);
+
+}
+
+
+.candle2 {
+
+  height: 100px;
+
+  transform:
+    rotate(2deg);
+
+}
+
+
+.candle3 {
+
+  height: 65px;
+
+  transform:
+    rotate(-2deg);
+
+}
+
+
+.candle4 {
+
+  height: 98px;
+
+  transform:
+    rotate(3deg);
+
+}
+
+
+.candle5 {
+
+  height: 78px;
+
+  transform:
+    rotate(-3deg);
+
+}
+
+
+/* =====================
+   FLAME
+===================== */
+
+.flame {
+
+  position: absolute;
+
+  top: -23px;
+
+  left: 50%;
+
+  width: 14px;
+
+  height: 22px;
+
+  transform:
+    translateX(-50%);
+
+  transform-origin:
+    bottom center;
+
+  border-radius:
+
+    50% 50%
+    45% 45%;
+
+  background:
+
+    linear-gradient(
+
+      to top,
+
+      #ff962d,
+
+      #ffd15e,
+
+      #fff3a5
+
+    );
+
+  box-shadow:
+
+    0 0 7px
+    #ffc14c,
+
+    0 0 15px
+    rgba(
+      255,
+      186,
+      62,
+      .65
+    );
+
+  animation:
+
+    flameMove
+    .45s
+    infinite
+    alternate;
+
+}
+
 
 @keyframes flameMove {
+
   from {
-    transform: scale(0.9) rotate(-5deg);
+
+    transform:
+
+      translateX(-50%)
+
+      rotate(-5deg)
+
+      scale(.9);
+
   }
+
 
   to {
-    transform: scale(1.1) rotate(5deg);
+
+    transform:
+
+      translateX(-50%)
+
+      rotate(5deg)
+
+      scale(1.08);
+
   }
+
 }
 
-/* =========================
-   ปุ่ม
-========================= */
 
-button {
+/* =====================
+   BUTTON
+===================== */
+
+.pink-button {
+
   border: none;
-  outline: none;
-
-  background: linear-gradient(135deg, #ef8fb3, #e879a5);
-
-  color: white;
-
-  padding: 14px 28px;
 
   border-radius: 30px;
 
-  font-size: 17px;
+  padding:
+    14px 28px;
 
-  cursor: pointer;
+  background:
 
-  box-shadow: 0 6px 15px rgba(225, 117, 160, 0.25);
+    linear-gradient(
+      135deg,
+      #f6a2b9,
+      #e982a3
+    );
 
-  transition: 0.2s;
-}
+  color:
+    white;
 
-button:active {
-  transform: scale(0.94);
-}
-
-.hidden {
-  display: none;
-}
-
-/* =========================
-   ฉลอง
-========================= */
-
-#celebrate {
-  margin-top: 55px;
-  animation: fadeUp 0.8s ease;
-}
-
-#celebrate h2 {
-  color: #e578a3;
-  font-size: 28px;
-}
-
-.littleText {
-  font-size: 18px;
-  margin-top: 5px;
-}
-
-/* =========================
-   ซองจดหมาย
-========================= */
-
-.envelope {
-  font-size: 105px;
-  margin: 20px 0 5px;
-  cursor: pointer;
-
-  animation: envelopeFloat 1.2s ease-in-out infinite alternate;
-}
-
-@keyframes envelopeFloat {
-  from {
-    transform: translateY(0) rotate(-2deg);
-  }
-
-  to {
-    transform: translateY(-13px) rotate(2deg);
-  }
-}
-
-/* =========================
-   จดหมาย
-========================= */
-
-.letter {
-  margin-top: 70px;
-
-  background: rgba(255,255,255,0.96);
-
-  border: 5px solid #edb0d8;
-
-  border-radius: 18px;
-
-  padding: 35px 28px;
-
-  line-height: 1.9;
+  font-size:
+    17px;
 
   box-shadow:
-    0 15px 40px rgba(220, 125, 165, 0.18);
 
-  text-align: left;
+    0 8px 20px
+    rgba(
+      217,
+      105,
+      143,
+      .25
+    );
 
-  animation: openLetter 0.9s ease;
+  cursor:
+    pointer;
+
 }
+
+
+.pink-button:active {
+
+  transform:
+    scale(.95);
+
+}
+
+
+.hidden {
+
+  display:
+    none !important;
+
+}
+
+
+/* =====================
+   AFTER BLOW
+===================== */
+
+.after-blow {
+
+  margin-top:
+    55px;
+
+  animation:
+
+    fadeUp
+    .8s ease;
+
+}
+
+
+.after-blow h2 {
+
+  color:
+    #e3799a;
+
+  font-size:
+    27px;
+
+}
+
+
+.read-message {
+
+  margin-top:
+    25px;
+
+  font-size:
+    18px;
+
+}
+
+
+/* =====================
+   ENVELOPE
+===================== */
+
+.envelope {
+
+  position:
+    relative;
+
+  width:
+    240px;
+
+  height:
+    155px;
+
+  margin:
+
+    55px auto
+    30px;
+
+  cursor:
+    pointer;
+
+  animation:
+
+    envelopeFloat
+    1.3s
+    infinite
+    alternate
+    ease-in-out;
+
+}
+
+
+.envelope-back {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  border-radius:
+    13px;
+
+  background:
+    #efb4db;
+
+  box-shadow:
+
+    0 14px 30px
+    rgba(
+      215,
+      125,
+      176,
+      .22
+    );
+
+}
+
+
+.envelope-paper {
+
+  position:
+    absolute;
+
+  z-index:
+    1;
+
+  left:
+    20px;
+
+  top:
+    -20px;
+
+  width:
+    200px;
+
+  height:
+    115px;
+
+  border-radius:
+    8px;
+
+  background:
+    white;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  font-size:
+    35px;
+
+  transition:
+    transform .5s;
+
+}
+
+
+.envelope:hover
+.envelope-paper {
+
+  transform:
+    translateY(-18px);
+
+}
+
+
+.envelope-left {
+
+  position:
+    absolute;
+
+  z-index:
+    3;
+
+  left:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    0;
+
+  height:
+    0;
+
+  border-top:
+    78px solid
+    transparent;
+
+  border-bottom:
+    77px solid
+    #efacd5;
+
+  border-right:
+    120px solid
+    transparent;
+
+}
+
+
+.envelope-right {
+
+  position:
+    absolute;
+
+  z-index:
+    3;
+
+  right:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    0;
+
+  height:
+    0;
+
+  border-top:
+    78px solid
+    transparent;
+
+  border-bottom:
+    77px solid
+    #f4b9dd;
+
+  border-left:
+    120px solid
+    transparent;
+
+}
+
+
+.envelope-bottom {
+
+  position:
+    absolute;
+
+  z-index:
+    4;
+
+  bottom:
+    0;
+
+  width:
+    100%;
+
+  height:
+    90px;
+
+  clip-path:
+
+    polygon(
+      0 100%,
+      50% 25%,
+      100% 100%
+    );
+
+  background:
+    #f2b4da;
+
+}
+
+
+.heart-seal {
+
+  position:
+    absolute;
+
+  z-index:
+    5;
+
+  left:
+    50%;
+
+  top:
+    64px;
+
+  width:
+    52px;
+
+  height:
+    52px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    50%;
+
+  background:
+    white;
+
+  color:
+    #eb94c1;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  font-size:
+    31px;
+
+}
+
+
+@keyframes envelopeFloat {
+
+  from {
+
+    transform:
+      translateY(0);
+
+  }
+
+
+  to {
+
+    transform:
+      translateY(-12px);
+
+  }
+
+}
+
+
+/* =====================
+   LETTER
+===================== */
+
+.letter {
+
+  margin-top:
+    80px;
+
+  padding:
+    36px 28px;
+
+  border:
+
+    4px solid
+    #ebb0d0;
+
+  border-radius:
+    18px;
+
+  background:
+
+    linear-gradient(
+      #ffffff,
+      #fff9fb
+    );
+
+  text-align:
+    left;
+
+  line-height:
+    1.9;
+
+  box-shadow:
+
+    0 18px 45px
+    rgba(
+      206,
+      113,
+      154,
+      .18
+    );
+
+  animation:
+
+    letterOpen
+    .9s ease;
+
+}
+
+
+.letter-top {
+
+  text-align:
+    center;
+
+  color:
+    #e994b0;
+
+  font-size:
+    25px;
+
+}
+
 
 .letter h2 {
-  color: #d86e9c;
-  font-size: 22px;
+
+  margin-top:
+    25px;
+
+  color:
+    #4e4548;
+
+  font-size:
+    22px;
+
 }
+
 
 .letter h3 {
-  color: #e17da6;
-  text-align: center;
-  margin: 25px 0;
+
+  color:
+    #d77697;
+
+  text-align:
+    center;
+
 }
+
 
 .letter p {
-  font-size: 16px;
-  margin: 25px 0;
+
+  margin:
+    25px 0;
+
+  font-size:
+    16px;
+
 }
 
-.letter strong {
-  color: #dc719d;
-}
-
-.letter-decoration {
-  text-align: center;
-  font-size: 25px;
-  margin-bottom: 25px;
-}
 
 .love {
-  font-size: 21px;
-  margin-top: 35px !important;
+
+  margin-top:
+    35px;
+
 }
 
-@keyframes openLetter {
+
+.bottom-heart {
+
+  text-align:
+    center;
+
+  color:
+    #e68da9;
+
+  font-size:
+    60px;
+
+  animation:
+
+    heartbeat
+    .8s
+    infinite
+    alternate;
+
+}
+
+
+@keyframes letterOpen {
+
   from {
-    opacity: 0;
-    transform: translateY(80px) scale(0.85);
+
+    opacity:
+      0;
+
+    transform:
+
+      translateY(80px)
+
+      scale(.85);
+
   }
+
 
   to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 
-/* =========================
-   หัวใจ
-========================= */
+    opacity:
+      1;
 
-.heart {
-  text-align: center;
+    transform:
 
-  color: #ed8eb2;
+      translateY(0)
 
-  font-size: 60px;
+      scale(1);
 
-  margin-top: 20px;
-
-  animation: heartbeat 0.8s infinite alternate;
-}
-
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
   }
 
-  to {
-    transform: scale(1.25);
-  }
 }
 
-/* =========================
-   เอฟเฟกต์หัวใจลอย
-========================= */
+
+/* =====================
+   HEART EFFECT
+===================== */
 
 .floating-heart {
-  position: fixed;
 
-  bottom: -30px;
+  position:
+    fixed;
 
-  font-size: 25px;
+  z-index:
+    100;
 
-  pointer-events: none;
+  bottom:
+    -40px;
 
-  animation: floatHeart 3s linear forwards;
+  pointer-events:
+    none;
+
+  animation:
+
+    heartFloat
+    4s
+    linear
+    forwards;
+
 }
 
-@keyframes floatHeart {
+
+@keyframes heartFloat {
+
   from {
-    transform: translateY(0) scale(0.8);
-    opacity: 1;
+
+    opacity:
+      1;
+
+    transform:
+
+      translateY(0)
+
+      rotate(0);
+
   }
+
 
   to {
-    transform: translateY(-110vh) scale(1.5);
-    opacity: 0;
+
+    opacity:
+      0;
+
+    transform:
+
+      translateY(-110vh)
+
+      rotate(25deg);
+
   }
+
 }
 
-/* มือถือ */
 
-@media (max-width: 400px) {
+@keyframes heartbeat {
+
+  from {
+
+    transform:
+      scale(1);
+
+  }
+
+
+  to {
+
+    transform:
+      scale(1.2);
+
+  }
+
+}
+
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(30px);
+
+  }
+
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =====================
+   MOBILE
+===================== */
+
+@media
+(max-width: 390px) {
 
   h1 {
-    font-size: 25px;
+
+    font-size:
+      31px;
+
   }
+
 
   .cake {
-    transform: scale(0.9);
+
+    transform:
+      scale(.88);
+
+    margin-top:
+      45px;
+
+    margin-bottom:
+      -5px;
+
   }
 
+
+  .cake:active {
+
+    transform:
+      scale(.85);
+
+  }
+
+
   .letter {
-    padding: 28px 20px;
+
+    padding:
+      30px 21px;
+
   }
 
 }
