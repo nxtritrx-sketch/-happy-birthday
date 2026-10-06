@@ -3,77 +3,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday 💗</title>
+  <title>Happy Birthday 🎀</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<main class="page">
 
-  <h1>HAPPY BIRTHDAY 🎀</h1>
+  <div class="tiny-heart">♡</div>
 
-  <p id="message">กดที่เค้กสิ! 🎂</p>
+  <h1>Happy Birthday</h1>
+
+  <p id="instruction">กดที่เค้กสิ! 🎂</p>
+
+
+  <!-- =====================
+       CAKE
+  ====================== -->
 
   <div class="cake" id="cake">
+
+    <!-- เทียน 5 เล่ม -->
     <div class="candles" id="candles">
-      <div class="candle"><span class="flame"></span></div>
-      <div class="candle"><span class="flame"></span></div>
-      <div class="candle"><span class="flame"></span></div>
-      <div class="candle"><span class="flame"></span></div>
-      <div class="candle"><span class="flame"></span></div>
+
+      <div class="candle candle1">
+        <span class="flame"></span>
+      </div>
+
+      <div class="candle candle2">
+        <span class="flame"></span>
+      </div>
+
+      <div class="candle candle3">
+        <span class="flame"></span>
+      </div>
+
+      <div class="candle candle4">
+        <span class="flame"></span>
+      </div>
+
+      <div class="candle candle5">
+        <span class="flame"></span>
+      </div>
+
     </div>
 
+
+    <!-- ด้านบนเค้ก -->
     <div class="cake-top">
-      <span>Happy Birthday</span>
+
+      <div class="cream c1"></div>
+      <div class="cream c2"></div>
+      <div class="cream c3"></div>
+      <div class="cream c4"></div>
+      <div class="cream c5"></div>
+      <div class="cream c6"></div>
+      <div class="cream c7"></div>
+
+      <div class="cake-writing">
+        Happy<br>
+        Birthday
+      </div>
+
+      <span class="mini-flower flower1">✿</span>
+      <span class="mini-flower flower2">✿</span>
+      <span class="mini-flower flower3">✿</span>
+      <span class="mini-flower flower4">✿</span>
+
     </div>
 
+
+    <!-- ตัวบ้านเค้ก -->
     <div class="cake-body">
-      <div class="window">♡</div>
-      <div class="door"></div>
-      <div class="window">♡</div>
+
+      <span class="dot-flower df1">✿</span>
+      <span class="dot-flower df2">✿</span>
+      <span class="dot-flower df3">✿</span>
+
+
+      <!-- หน้าต่างซ้าย -->
+      <div class="window window-left">
+
+        <div class="vertical"></div>
+        <div class="horizontal"></div>
+
+        <div class="flower-box">
+          • • •
+        </div>
+
+      </div>
+
+
+      <!-- ประตู -->
+      <div class="door">
+
+        <div class="door-lines"></div>
+
+        <span class="knob"></span>
+
+      </div>
+
+
+      <!-- หน้าต่างขวา -->
+      <div class="window window-right">
+
+        <div class="vertical"></div>
+        <div class="horizontal"></div>
+
+        <div class="flower-box">
+          • • •
+        </div>
+
+      </div>
+
+
+      <!-- พุ่ม -->
+      <div class="bush bush-left">
+        ✿
+      </div>
+
+      <div class="bush bush-right">
+        ✿
+      </div>
+
     </div>
+
+
+    <!-- ฐานหน้าเค้ก -->
+    <div class="stairs">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
   </div>
 
-  <button id="blowBtn" class="hidden">
-    💨 เป่าเทียน
+
+  <!-- ปุ่มเป่าเทียน -->
+
+  <button
+    id="blowBtn"
+    class="pink-button hidden">
+
+    💨 เป่าเทียนเลย
+
   </button>
 
-  <div id="celebrate" class="hidden">
+
+  <!-- =====================
+       AFTER BLOW
+  ====================== -->
+
+  <section
+    id="afterBlow"
+    class="after-blow hidden">
+
     <h2>เย้!! 🎉</h2>
-    <p>สุขสันต์วันเกิดนะอ้วน 💞</p>
-
-    <div class="envelope" id="envelope">
-      💌
-    </div>
-
-    <p>เค้ามีอะไรอยากให้อ้วนอ่านด้วยนะ</p>
-    <button id="letterBtn">เปิดจดหมาย 💗</button>
-  </div>
-
-  <div id="letter" class="letter hidden">
-
-    <h2>To. คนพิเศษของเค้า 🧸🌻</h2>
 
     <p>
-      Happy Birthday นะอ้วนน 🤍💐<br><br>
-
-      ขอให้วันเกิดปีนี้อ้วนมีความสุขมากๆ เจอแต่เรื่องดีๆ
-      เรื่องน่ารักๆเข้ามาในชีวิต ขอให้สมหวังกับทุกสิ่งที่ตั้งใจ<br><br>
-
-      ถึงแม้วันนี้จะไม่ได้อยู่ด้วยกัน แต่เค้าอยากให้รู้ว่า
-      เค้าอยู่ข้างๆอ้วนเสมอไม่ว่าจะเจอเรื่องร้ายๆหรือเหนื่อย
-      ที่จริงอยากพูดเยอะมากแต่เค้าปากแข็งอิอิ<br><br>
-
-      ขอบคุณสำหรับทุกช่วงเวลาดีๆที่อ้วนมีให้เค้า<br>
-      เค้ารักอ้วนน 🌷😽
+      สุขสันต์วันเกิดนะอ้วนน 🤍💐
     </p>
 
-    <div class="heart">♡</div>
 
-  </div>
+    <!-- ซองจดหมาย -->
 
-</div>
+    <div
+      class="envelope"
+      id="envelope">
+
+      <div class="envelope-paper">
+        💗
+      </div>
+
+      <div class="envelope-back"></div>
+
+      <div class="envelope-left"></div>
+
+      <div class="envelope-right"></div>
+
+      <div class="envelope-bottom"></div>
+
+      <div class="heart-seal">
+        ♡
+      </div>
+
+    </div>
+
+
+    <p class="read-message">
+      มีอะไรอยากให้อ้วนอ่านด้วยนะ 🥹
+    </p>
+
+
+    <button
+      id="openLetterBtn"
+      class="pink-button">
+
+      เปิดจดหมาย 😻
+
+    </button>
+
+  </section>
+
+
+  <!-- =====================
+       LETTER
+  ====================== -->
+
+  <section
+    id="letter"
+    class="letter hidden">
+
+    <div class="letter-top">
+      ♡　💗　♡
+    </div>
+
+
+    <h2>
+      To. คนพิเศษของเค้า 🧸🌻
+    </h2>
+
+
+    <h3>
+      Happy Birthday นะอ้วนน 🤍💐
+    </h3>
+
+
+    <p>
+      สุขสันต์วันเกิดนะคะคนเก่งของเค้า
+      ขอให้อ้วนเจอแต่เรื่องดีๆ
+      มีแต่เรื่องน่ารักๆเข้ามาในชีวิต
+      ขอให้อ้วนมีความสุขมากๆ
+      สุขภาพแข็งแรง
+      และสมหวังในทุกเรื่องที่ตั้งใจนะ
+    </p>
+
+
+    <p>
+      ถึงแม้วันนี้ไม่ได้อยู่ด้วยกัน
+      แต่เค้าอยากจะบอกอ้วนว่า
+      ไม่ว่าอ้วนจะเจอเรื่องร้ายๆ
+      หรือเหนื่อยแค่ไหน
+      อย่าลืมว่ายังมีเค้าคนนี้
+      คอยเป็นกำลังใจ
+      และอยู่ข้างๆอ้วนเสมอนะ
+    </p>
+
+
+    <p>
+      ขอบคุณสำหรับทุกช่วงเวลาดีๆที่อ้วนมีให้เค้า
+    </p>
+
+
+    <h3 class="love">
+      เค้ารักอ้วนน 🌷😽
+    </h3>
+
+
+    <div class="bottom-heart">
+      ♡
+    </div>
+
+  </section>
+
+</main>
+
 
 <script src="script.js"></script>
 
